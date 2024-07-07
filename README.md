@@ -4,6 +4,17 @@
 
 [GitHub Repo](https://github.com/perripez/PerriAdkins_T1A3)
 
+# Installing the App
+
+```
+1. git clone git@github.com:perripez/PerriAdkins_T1A3.git
+2. cd PerriAdkins_T1A3
+3. cd grocery_store_app
+3. cd src
+4. chmod +x run.sh
+5. ./run.sh
+```
+
 ## About the App
 
 __Purpose:__
@@ -61,7 +72,7 @@ Function that saves the exiting JSON file date and exits the app
 - If unsuccessful, app will print and error
 User is prompted for input again
 
-### More information about the app is documented help.txt file
+
 
 ## Flowchart
 

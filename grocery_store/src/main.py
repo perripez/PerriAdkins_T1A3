@@ -21,7 +21,7 @@ def main():
         return
     while True: # While loop that allows user to retry an input if an error occurs
         print("\n Grocery List Planner:")
-        print("********************")
+        print("------------------------")
         print("1. Check current list")
         print("2. Add item to list")
         print("3. Remove item from list")
@@ -41,8 +41,10 @@ def main():
             remove_item.remove_item(FILE_PATH) # Call remove item function
         elif choice == "4":
             clear_console()
+            print("********************")
             print(f"Your total is: {locale.currency(total_price.total_price(groceries))}") # Call total price function & formats in $0.00
             print("Thank you for shopping with us!")
+            print("********************")
         elif choice == "5":
             clear_console()
             try:

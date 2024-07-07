@@ -20,7 +20,8 @@ def main():
         print("Yikes, no matches loaded or an error occured. Exiting")
         return
     while True: # While loop that allows user to retry an input if an error occurs
-        print("\n Grocery Planner:")
+        print("\n Grocery List Planner:")
+        print("********************")
         print("1. Check current list")
         print("2. Add item to list")
         print("3. Remove item from list")

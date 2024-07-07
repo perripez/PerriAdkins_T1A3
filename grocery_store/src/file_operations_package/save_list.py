@@ -16,4 +16,4 @@ def save_groceries(file_path, groceries):
         print(f"Stop right there! Permission denied to write.")
     except Exception as e:
         print(f"Argh! An unexpected error has occured: {e}")
-        
+

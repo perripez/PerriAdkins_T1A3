@@ -4,7 +4,7 @@ import locale
 locale.setlocale(locale.LC_ALL, '') # Formats pricing correctly
 
 # Import functions from packages
-from file_operations_package import load_groceries, save_list
+from file_operations_package import load_groceries, save_list, remove_item
 from grocery_operations_package import add_item, display_groceries, total_price
 
 FILE_PATH = '../data/grocery_list.json'
@@ -23,8 +23,9 @@ def main():
         print("\n Grocery Planner:")
         print("1. Check current list")
         print("2. Add item to list")
-        print("3. Check out!")
-        print("4. Save and exit")
+        print("3. Remove item from list")
+        print("4. Check out!")
+        print("5. Save and exit")
 
         choice = input("Choose an option: ")
 
@@ -36,9 +37,12 @@ def main():
             add_item.add_item(groceries) # Call add item function
         elif choice == "3":
             clear_console()
+            remove_item.remove_item(FILE_PATH) # Call remove item function
+        elif choice == "4":
+            clear_console()
             print(f"Your total is: {locale.currency(total_price.total_price(groceries))}") # Call total price function & formats in $0.00
             print("Thank you for shopping with us!")
-        elif choice == "4":
+        elif choice == "5":
             clear_console()
             try:
                 save_list.save_groceries(FILE_PATH, groceries) # Call save groceries function

@@ -10,5 +10,9 @@
     {
         "item": "eggs",
         "price": 3.0
+    },
+    {
+        "item": "milk",
+        "price": 4.0
     }
 ]

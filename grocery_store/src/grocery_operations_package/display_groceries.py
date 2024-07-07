@@ -15,7 +15,3 @@ def display_groceries(file_path):
                 
     except Exception as e:
         print(f"Sorry! An unexpected error has occurred: {e}")
-
-
-
-        

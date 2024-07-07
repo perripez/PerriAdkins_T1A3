@@ -3,6 +3,10 @@ import os # Clears console for user aftereach interaction for easy readability
 import locale
 locale.setlocale(locale.LC_ALL, '') # Formats pricing correctly
 
+import colorama
+from colorama import Back, Fore, Style
+
+
 # Import functions from packages
 from file_operations_package import load_groceries, save_list, remove_item
 from grocery_operations_package import add_item, display_groceries, total_price
@@ -21,14 +25,14 @@ def main():
         return
     while True: # While loop that allows user to retry an input if an error occurs
         print("\n Grocery List Planner:")
-        print("------------------------")
-        print("1. Check current list")
-        print("2. Add item to list")
-        print("3. Remove item from list")
-        print("4. Check out!")
-        print("5. Save and exit")
+        print("")
+        print(Fore.RED + "1. Check current list")
+        print(Fore.MAGENTA + "2. Add item to list")
+        print(Fore.BLUE + "3. Remove item from list")
+        print(Fore.GREEN + "4. Check out!")
+        print(Fore.YELLOW + "5. Save and exit")
 
-        choice = input("Choose an option: ")
+        choice = input(Fore.WHITE + "Choose an option: ")
 
         if choice == "1":
             clear_console()

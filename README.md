@@ -216,6 +216,16 @@ END
 
 ## Code Style Guide
 
+I have chosen to use PEP8 for the styling of my Python code for the app. 
+
+PEP8 Features:
+- Readability (indentation & clear structure)
+- Maintainability (easier to update and more efficient for collaboration)
+- Adheres to standards (professional practice for the industry)
+
+https://peps.python.org/pep-0008/
+
+To maintain consistent styling, I have used the autopep8 VSCode extention: https://pypi.org/project/autopep8/
 
 
 

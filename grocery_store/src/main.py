@@ -60,5 +60,5 @@ def main():
             print("Very funny! Please choose an option")
 
 if __name__ == "__main__":
-    main()
+    main() # Main function only runs when directly calling it 
 

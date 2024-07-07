@@ -32,7 +32,7 @@ def main():
         print(Fore.GREEN + "4. Check out!")
         print(Fore.YELLOW + "5. Save and exit")
 
-        choice = input(Fore.WHITE + "Choose an option: ")
+        choice = input("Choose an option: ")
 
         if choice == "1":
             clear_console()

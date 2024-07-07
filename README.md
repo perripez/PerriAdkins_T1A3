@@ -65,5 +65,101 @@ User is prompted for input again
 
 ## Flowchart
 
+![Flowchart](./docs/Terminal%20App%20Flowchart.png)
 
+## Psuedocode
 
+```
+BEGIN
+    FUNCTION main
+        WHILE True
+            DISPLAY "Please select an option:"
+            DISPLAY "1. DISPLAY GROCERY LIST"
+            DISPLAY "2. ADD TO GROCERY LIST"
+            DISPLAY "3. REMOVE FROM GROCERY LIST"
+            DISPLAY "4. CHECKOUT"
+            DISPLAY "5. SAVE AND EXIT"
+            INPUT option
+
+            IF option IS "1"
+                CALL display_grocery_list()
+            ELIF option IS "2"
+                CALL add_to_grocery_list()
+            ELIF option IS "3"
+                CALL remove_from_grocery_list()
+            ELIF option IS "4"
+                CALL checkout()
+            ELIF option IS "5"
+                CALL save_and_exit()
+                BREAK
+            ELSE
+                DISPLAY "Invalid option. Please try again."
+            END IF
+        END WHILE
+    END FUNCTION
+
+    FUNCTION display_grocery_list
+        TRY
+            READ grocery_list FROM "grocery_list.json"
+            FOR EACH item IN grocery_list
+                DISPLAY item.name + ": $" + item.price
+            END FOR
+        EXCEPT
+            DISPLAY "Error reading grocery list."
+    END FUNCTION
+
+    FUNCTION add_to_grocery_list
+        DISPLAY "Enter item name:"
+        INPUT item_name
+        DISPLAY "Enter item price:"
+        INPUT item_price
+
+        TRY
+            READ grocery_list FROM "grocery_list.json"
+            ADD item_name: item_price TO grocery_list
+            WRITE grocery_list TO "grocery_list.json"
+            DISPLAY "Item added successfully."
+        EXCEPT
+            DISPLAY "Error adding item to grocery list."
+    END FUNCTION
+
+    FUNCTION remove_from_grocery_list
+        DISPLAY "Enter item name to remove:"
+        INPUT item_name
+
+        TRY
+            READ grocery_list FROM "grocery_list.json"
+            IF item_name IN grocery_list
+                REMOVE item_name FROM grocery_list
+                WRITE grocery_list TO "grocery_list.json"
+                DISPLAY "Item removed successfully."
+            ELSE
+                DISPLAY "Item not found in grocery list."
+            END IF
+        EXCEPT
+            DISPLAY "Error removing item from grocery list."
+    END FUNCTION
+
+    FUNCTION checkout
+        TRY
+            READ grocery_list FROM "grocery_list.json"
+            total_price = 0
+            FOR EACH item IN grocery_list
+                total_price = total_price + item.price
+            END FOR
+            DISPLAY "Thank you for shopping with us! Your total is $" + total_price
+        EXCEPT
+            DISPLAY "Error calculating total price."
+    END FUNCTION
+
+    FUNCTION save_and_exit
+        TRY
+            WRITE grocery_list TO "grocery_list.json"
+            DISPLAY "Grocery list saved successfully. File path: <file_path>"
+        EXCEPT
+            DISPLAY "Error saving grocery list."
+    END FUNCTION
+
+    CALL main
+END
+```

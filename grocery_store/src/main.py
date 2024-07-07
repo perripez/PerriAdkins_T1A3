@@ -31,10 +31,10 @@ def main():
 
         if choice == "1":
             clear_console()
-            display_groceries.display_groceries(groceries) # Call display groceries function
+            display_groceries.display_groceries(FILE_PATH) # Call display groceries function
         elif choice == "2":
             clear_console()
-            add_item.add_item(groceries) # Call add item function
+            add_item.add_item(FILE_PATH, groceries) # Call add item function
         elif choice == "3":
             clear_console()
             remove_item.remove_item(FILE_PATH) # Call remove item function

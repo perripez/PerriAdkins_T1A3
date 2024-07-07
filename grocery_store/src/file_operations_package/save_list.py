@@ -1,19 +1,14 @@
-# Import JSON to be read by functions
 import json
 
 def save_groceries(file_path, groceries):
     """
-    Saves groceries to JSON file
-    
-    paraneters: file_path: Path to the JSON file, groceries: items in JSON file
-    return: success message if save is successful
+    Saves groceries to JSON file.
     """
     try:
+        print(f"Saving groceries to file: {file_path}, Type: {type(file_path)}")
         with open(file_path, 'w') as file:
-            json.dump(groceries, file, indent=4) # .dump stores items in file with indent set to 4
-        print(f"Yahoo! Your grocery list was saved to {file_path}")
-    except PermissionError:
-        print(f"Stop right there! Permission denied to write.")
+            json.dump(groceries, file, indent=4)
+        print(f"Your grocery list was saved to {file_path}")
     except Exception as e:
-        print(f"Argh! An unexpected error has occured: {e}")
+        print(f"An unexpected error occurred while saving: {e}")
 

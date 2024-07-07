@@ -1,11 +1,11 @@
+# Import JSON to be read by functions
 import json
 
 def save_groceries(file_path, groceries):
     """
-    Saves groceries to JSON file.
+    Saves groceries to JSON file - this has been added to ensure that the most recent JSON file is always read.
     """
     try:
-        print(f"Saving groceries to file: {file_path}, Type: {type(file_path)}")
         with open(file_path, 'w') as file:
             json.dump(groceries, file, indent=4)
         print(f"Your grocery list was saved to {file_path}")
@@ -18,11 +18,10 @@ def remove_item(file_path):
     Allows user to input an item name to be removed from the JSON file.
     """
     try:
-        removed_item = input("Which item would you like to remove?: ").strip().lower()
-        print(f"Opening file: {file_path}, Type: {type(file_path)}")
+        removed_item = input("Which item would you like to remove?: ").strip().lower() # Take user input to remove their desired item
 
         with open(file_path, 'r') as file:
-            groceries = json.load(file)
+            groceries = json.load(file) # Load existing file
 
         # Filter out the item to be removed
         updated_groceries = [item for item in groceries if item['item'].lower() != removed_item]

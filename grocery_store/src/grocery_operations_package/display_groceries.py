@@ -1,3 +1,4 @@
+# Import JSON to be read by functions
 import json
 
 def display_groceries(file_path):
@@ -6,10 +7,10 @@ def display_groceries(file_path):
     """
     try:
         with open(file_path, 'r') as file:
-            groceries = json.load(file)
-            print("\nList of Items:")
+            groceries = json.load(file) # Ensure the most recent JSON file is always read 
+            print("Your grocery list:")
             for item in groceries:
-                print(f"- {item['item']} | {item['price']}")
+                print(f"* {item['item']} | {item['price']}")
                 
     except Exception as e:
         print(f"Sorry! An unexpected error has occurred: {e}")

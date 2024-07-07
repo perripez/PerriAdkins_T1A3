@@ -163,3 +163,65 @@ BEGIN
     CALL main
 END
 ```
+## Project Planning
+
+- Decide on application idea
+- Decide on main functions for app (get approved by teacher)
+- Create flowchart + psuedocode
+- Create Trello Board
+- Create Grocery List JSON
+- Create File Operations
+- Create Grocery Operations
+- Create Main Operations
+- Test, test, test!!
+- Make app an executable
+- Create help.txt 
+
+### First Priority *** 4pm July 7th ALL DUE
+
+- TESTTTTT
+- help.txt
+- Make an executable
+
+### Second Priority ** Aim for 4pm July 6th
+
+- TESTTTTT
+- Expand default grocery list
+- Comments on functions
+- Python packages
+
+### Third Priority * Aim for 4pm July 5th
+
+- Create documentation for app as I go
+- Finalise flowchart, psuedocode, trello
+- Create Grocery List JSON
+- Create File Operations
+- Create Grocery Operations
+- Create Main Operations
+
+## Trello Board Progress
+
+![1](./docs/Trello%20Board%201.png)
+![Documentation Card](./docs/Documentation%20Checklist.png)
+![2](./docs/Trello%20Board%202.png)
+![3](./docs/Trello%20Board%203.png)
+![4](./docs/Trello%20Board%204.png)
+![5](./docs/Trello%20Board%205.png)
+![6](./docs/Trello%20Board%206.png)
+![7](./docs/Trello%20Board%207.png)
+![8](./docs/Trello%20Board%208.png)
+![9](./docs/Trello%20Board%209.png)
+![10](./docs/Trello%20Board%2010.png)
+![11](./docs/Trello%20Board%2011.png)
+
+## Code Style Guide
+
+
+
+
+
+
+
+
+
+
